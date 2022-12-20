@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="condicion_2">Condición 2</string>
+    <color name="color_condicion_2">#B6473F</color>
+    <color name="color_background_condicion_2">#B6473F</color>
+</resources>
