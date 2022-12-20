@@ -10,6 +10,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.movcompjagp.databinding.ActivityAcicloVidaBinding
 
 class ACicloVida : AppCompatActivity() {
+    var textoGlobal = ""
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityAcicloVidaBinding
@@ -30,11 +31,49 @@ class ACicloVida : AppCompatActivity() {
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
         }
+        mostrarSnackBar("OnCreate")
+    }
+
+    override fun onStart(){
+        super.onStart()
+        mostrarSnackBar("OnStart")
+    }
+
+    override fun onResume(){
+        super.onResume()
+        mostrarSnackBar("OnResume")
+    }
+
+    override fun onRestart(){
+        super.onRestart()
+        mostrarSnackBar("OnRestart")
+    }
+
+    override fun onPause(){
+        super.onPause()
+        mostrarSnackBar("OnPause")
+    }
+
+    override fun onStop(){
+        super.onStop()
+        mostrarSnackBar("OnStop")
+    }
+
+    override fun onDestroy(){
+        super.onDestroy()
+        mostrarSnackBar("OnDestoy")
     }
 
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment_content_aciclo_vida)
         return navController.navigateUp(appBarConfiguration)
                 || super.onSupportNavigateUp()
+    }
+
+    fun mostrarSnackBar(texto:String){
+        textoGlobal += texto
+        Snackbar.make(findViewById(R.id.cl_ciclo_vida),
+        textoGlobal, Snackbar.LENGTH_LONG)
+            .setAction("Action", null).show()
     }
 }
