@@ -64,6 +64,27 @@ class ACicloVida : AppCompatActivity() {
         mostrarSnackBar("OnDestoy")
     }
 
+    override fun onSaveInstanceState(outState: Bundle) {
+        outState.run {
+            //GUARDAR LAS VARIABLES
+            //PRIMITIVAS
+            putString("textoGuardado", textoGlobal)
+
+            //putInt("numeroGuardado", numero)
+        }
+        super.onSaveInstanceState(outState)
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        val textoRecuperado:String? = savedInstanceState.getString("textoGuardado")
+        //val textoRecuperado:Int? = savedInstanceState.getInt("numeroGuardado")
+        if(textoRecuperado!=null){
+            mostrarSnackBar(textoRecuperado)
+            textoGlobal = textoRecuperado
+        }
+    }
+
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment_content_aciclo_vida)
         return navController.navigateUp(appBarConfiguration)
@@ -76,4 +97,5 @@ class ACicloVida : AppCompatActivity() {
         textoGlobal, Snackbar.LENGTH_LONG)
             .setAction("Action", null).show()
     }
+
 }
