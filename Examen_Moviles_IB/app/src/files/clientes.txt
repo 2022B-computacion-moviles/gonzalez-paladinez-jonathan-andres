@@ -1,0 +1,2 @@
+1106043365;Jonathan González;2000-03-27;true;220.00
+1102433693;Dolores Paladinez;1970-02-09;true;525.00
