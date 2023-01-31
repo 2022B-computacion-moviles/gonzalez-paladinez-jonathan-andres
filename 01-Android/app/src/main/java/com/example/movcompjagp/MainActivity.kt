@@ -81,6 +81,18 @@ class MainActivity : AppCompatActivity() {
             .setOnClickListener {
                 abrirActividadConParametros(CIntentExplicitoParametros::class.java)
             }
+
+        val botonCrudEntrenador = findViewById<Button>(R.id.btn_sqlite)
+        botonCrudEntrenador
+            .setOnClickListener {
+                irActividad(ECrudEntrenador::class.java)
+            }
+
+        val botonRView = findViewById<Button>(R.id.btn_revcycler_view)
+        botonRView
+            .setOnClickListener {
+                irActividad(GRecyclerView::class.java)
+            }
     }
 
     fun abrirActividadConParametros(
