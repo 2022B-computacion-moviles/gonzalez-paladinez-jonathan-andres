@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IngresaProducto">
+
+
+    <TextView
+        android:id="@+id/tv_anadir_producto"
+        android:layout_width="319dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="70dp"
+        android:text="Producto nuevo"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.056" />
+
+    <TextView
+        android:id="@+id/tv_nombre_producto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Nombre"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tv_anadir_producto"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_anadir_producto"
+        app:layout_constraintTop_toBottomOf="@+id/tv_anadir_producto" />
+
+    <TextView
+        android:id="@+id/tv_marca_producto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Marca"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/input_nombre_producto"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/input_nombre_producto"
+        app:layout_constraintTop_toBottomOf="@+id/input_nombre_producto" />
+
+    <TextView
+        android:id="@+id/tv_precio_producto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Precio"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/input_marca_producto"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/input_marca_producto"
+        app:layout_constraintTop_toBottomOf="@+id/input_marca_producto" />
+
+    <Button
+        android:id="@+id/btn_cancelar"
+        android:layout_width="146dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="96dp"
+        android:text="Cancelar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/input_precio_producto" />
+
+    <Button
+        android:id="@+id/btn_crear_producto"
+        android:layout_width="146dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="96dp"
+        android:text="Ingresar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/input_precio_producto"
+        app:layout_constraintStart_toEndOf="@+id/btn_cancelar" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/input_nombre_producto"
+        android:layout_width="325dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="16dp"
+        android:hint="Nombre"
+        app:layout_constraintEnd_toEndOf="@+id/tv_nombre_producto"
+        app:layout_constraintHorizontal_bias="0.003"
+        app:layout_constraintStart_toStartOf="@+id/tv_nombre_producto"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nombre_producto" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/input_marca_producto"
+        android:layout_width="322dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="20dp"
+        android:hint="Marca"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/tv_marca_producto"
+        app:layout_constraintHorizontal_bias="0.007"
+        app:layout_constraintStart_toStartOf="@+id/tv_marca_producto"
+        app:layout_constraintTop_toBottomOf="@+id/tv_marca_producto" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/input_precio_producto"
+        android:layout_width="320dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="40dp"
+        android:hint="Precio"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/tv_precio_producto"
+        app:layout_constraintHorizontal_bias="0.011"
+        app:layout_constraintStart_toStartOf="@+id/tv_precio_producto"
+        app:layout_constraintTop_toBottomOf="@+id/tv_precio_producto" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

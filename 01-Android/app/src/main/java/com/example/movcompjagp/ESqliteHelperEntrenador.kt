@@ -1,5 +1,6 @@
 package com.example.movcompjagp
 
+import android.annotation.SuppressLint
 import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
@@ -13,6 +14,7 @@ class ESqliteHelperEntrenador (
 null,
     1
 ) {
+    @SuppressLint("SuspiciousIndentation")
     override fun onCreate(db: SQLiteDatabase?) {
         val scriptSQLCrearTablaEntrenador =
             """
@@ -102,20 +104,24 @@ null,
             )
         )
         val existeUsuario = resultadoConsultaLectura.moveToFirst()
-        val usuarioEncontrado = BEntrenador(0, "", "")
+        var usuarioEncontrado = BEntrenador(0, "", "")
         //LÓGICA OBTENER USUARIO
-        do {
-            val id = resultadoConsultaLectura.getInt(0) //Columna índice 0 --> ID
-            val nombre = resultadoConsultaLectura.getString(1) //Columna índice 1 --> NOMBRE
-            val descripcion =
-                resultadoConsultaLectura.getString(2) //Columna índice 2 --> DESCRIPCION
-            if(id != null){
-                usuarioEncontrado.id = id
-                usuarioEncontrado.nombre = nombre
-                usuarioEncontrado.descripcion = descripcion
-            }
-
-        }while (resultadoConsultaLectura.moveToNext())
+        var arreglo = arrayListOf<BEntrenador>()
+        if(existeUsuario) {
+            do {
+                val id = resultadoConsultaLectura.getInt(0) //Columna índice 0 --> ID
+                val nombre = resultadoConsultaLectura.getString(1) //Columna índice 1 --> NOMBRE
+                val descripcion =
+                    resultadoConsultaLectura.getString(2) //Columna índice 2 --> DESCRIPCION
+                if (id != null) {
+                    usuarioEncontrado = BEntrenador(0,"","")
+                    usuarioEncontrado.id = id
+                    usuarioEncontrado.nombre = nombre
+                    usuarioEncontrado.descripcion = descripcion
+                    arreglo.add(usuarioEncontrado)
+                }
+            } while (resultadoConsultaLectura.moveToNext())
+        }
         resultadoConsultaLectura.close()
         baseDatosLectura.close()
         return usuarioEncontrado
