@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "256540084872",
+    "project_id": "telegram-deber-02",
+    "storage_bucket": "telegram-deber-02.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:256540084872:android:b581e282a40867745c2d3d",
+        "android_client_info": {
+          "package_name": "com.example.deber_02"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "256540084872-77kjkopkn4bk1sqhjlcikfffv9010ruc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBq_ci8Qi4m2_6DKXtxYgc7WF_GiVqH_bY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "256540084872-77kjkopkn4bk1sqhjlcikfffv9010ruc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
