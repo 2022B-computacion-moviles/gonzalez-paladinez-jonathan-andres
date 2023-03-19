@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditarClientes">
+
+    <Button
+        android:id="@+id/btn_actualizar_cliente"
+        android:layout_width="224dp"
+        android:layout_height="54dp"
+        android:layout_marginBottom="88dp"
+        android:text="Actualizar Cliente"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/input_correo_cliente"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="@+id/input_correo_cliente" />
+
+    <TextView
+        android:id="@+id/tv_editar_clientes"
+        android:layout_width="319dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="70dp"
+        android:text="Editar Clientes"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tv_nombre_producto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Nombre:"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tv_editar_clientes"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_editar_clientes"
+        app:layout_constraintTop_toBottomOf="@+id/tv_editar_clientes" />
+
+    <TextView
+        android:id="@+id/tv_edad_cliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Edad"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/input_edad_cliente"
+        app:layout_constraintEnd_toEndOf="@+id/input_nombre_cliente"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/input_nombre_cliente" />
+
+    <TextView
+        android:id="@+id/tv_precio_producto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="Teléfono"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/input_telefono_cliente"
+        app:layout_constraintEnd_toEndOf="@+id/input_edad_cliente"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/input_edad_cliente" />
+
+    <TextView
+        android:id="@+id/tv_correo_cliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Correo"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/input_correo_cliente"
+        app:layout_constraintEnd_toEndOf="@+id/input_telefono_cliente"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/input_telefono_cliente" />
+
+    <EditText
+        android:id="@+id/input_nombre_cliente"
+        android:layout_width="316dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:hint="Ingrese el nombre"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/tv_edad_cliente"
+        app:layout_constraintEnd_toEndOf="@+id/tv_nombre_producto"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_nombre_producto" />
+
+    <EditText
+        android:id="@+id/input_edad_cliente"
+        android:layout_width="316dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:hint="Edad"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/tv_precio_producto"
+        app:layout_constraintEnd_toEndOf="@+id/tv_edad_cliente"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_edad_cliente" />
+
+    <EditText
+        android:id="@+id/input_telefono_cliente"
+        android:layout_width="316dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:hint="Teléfono"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/tv_correo_cliente"
+        app:layout_constraintEnd_toEndOf="@+id/tv_precio_producto"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_precio_producto" />
+
+    <EditText
+        android:id="@+id/input_correo_cliente"
+        android:layout_width="316dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="64dp"
+        android:ems="10"
+        android:hint="Correo"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/btn_actualizar_cliente"
+        app:layout_constraintEnd_toEndOf="@+id/tv_precio_producto"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_precio_producto" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
